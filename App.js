@@ -50,9 +50,7 @@ export default function App() {
             ListHeaderComponent={() => <Header />}
             ListEmptyComponent={() => <Empty />}
             keyExtractor={(item) => item.key}
-            renderItem={({ item }) => (
-              <TodoList item={item} deleteItem={deleteItem} />
-            )}
+            renderItem={({ item }) => <TodoList item={item} deleteItem={deleteItem} />}
           />
           <View>
             <AddInput submitHandler={submitHandler} />
